@@ -1,13 +1,12 @@
 #Requires -Version 5.1
+#Requires -RunAsAdministrator
+
 
 # To run this script without downloading it, run the following line in an elevated (Administrator) PowerShell window:
-# Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dmotte/misc/main/scripts/setup-gitbash-environment/main.ps1'))
+# Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/aetonsi/misc/main/scripts/setup-gitbash-environment/main.ps1'))
 # After the installation completes, you will be able to open Git Bash from the Windows Start menu --> Git --> Git Bash
 
-if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Error 'This script requires administrator privileges'
-    return
-}
+
 
 Write-Output 'Installing Chocolatey'
 
