@@ -3,8 +3,8 @@
 
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 
-# Set-ExecutionPolicy Bypass -Scope Process -Force; irm 'https://raw.githubusercontent.com/aetonsi/misc/main/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
-# irm 'https://raw.githubusercontent.com/aetonsi/misc/main/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
+# Set-ExecutionPolicy Bypass -Scope Process -Force; irm 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
+# irm 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
 
 
 
