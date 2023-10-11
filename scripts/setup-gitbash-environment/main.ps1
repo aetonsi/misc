@@ -1,10 +1,10 @@
 #Requires -Version 5.1
 #Requires -RunAsAdministrator
 
+Set-ExecutionPolicy Bypass -Scope Process -Force;
 
-# To run this script without downloading it, run the following line in an elevated (Administrator) PowerShell window:
-# Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1'))
-# After the installation completes, you will be able to open Git Bash from the Windows Start menu --> Git --> Git Bash
+# Set-ExecutionPolicy Bypass -Scope Process -Force; irm 'https://raw.githubusercontent.com/aetonsi/misc/main/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
+# irm 'https://raw.githubusercontent.com/aetonsi/misc/main/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
 
 
 
