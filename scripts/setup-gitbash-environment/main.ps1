@@ -1,11 +1,7 @@
 #Requires -Version 5.1
 #Requires -RunAsAdministrator
 
-Set-ExecutionPolicy Bypass -Scope Process -Force;
-
 # Set-ExecutionPolicy Bypass -Scope Process -Force; irm 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
-# irm 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -f $f
-
 
 
 Write-Output 'Installing Chocolatey'
