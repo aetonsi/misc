@@ -1,7 +1,9 @@
 #Requires -Version 5.1
 #Requires -RunAsAdministrator
 
-# Set-ExecutionPolicy byp -Scope proc -for; irm 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1' > ($f="$([System.IO.Path]::GetTempPath())$([guid]::NewGuid()).ps1"); & ((get-process -id $PID).path) -nop -nol -f $f; remove-item $f
+# $u = 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1'; Set-ExecutionPolicy b -s p -f; irm $u > ($f = "$([IO.Path]::GetTempPath())$([GUID]::NewGuid()).ps1"); & $f; ri $f -f
+# OPPURE PER ESTESO:
+# $URL = 'https://cdn.jsdelivr.net/gh/aetonsi/misc/scripts/setup-gitbash-environment/main.ps1'; Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-RestMethod $URL > ($File = "$([System.IO.Path]::GetTempPath())$([GUID]::NewGuid()).ps1"); & $File; Remove-Item $File -Force
 
 
 Write-Output 'Installing Chocolatey'
